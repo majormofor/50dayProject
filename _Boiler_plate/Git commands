@@ -1,0 +1,8 @@
+ls - To check list of files in the folder
+git init - to initialise git
+git add . - to add files
+
+git status - check the added files
+git commit -m "first Commit"
+git remote add origin https://github.com/majormofor/50dayProject.git -- to add the file to the remote
+git push -u origin master
