@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Raleway:wght@500&family=Roboto:wght@300;400;700&display=swap");
+
+/* universal selector */
+* {
+  /* for padding and margin not to affect the width */
+  box-sizing: border-box;
+}
+body {
+  background-color: #efedd6;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* to hide the scroll bar in x axis */
+  overflow-x: hidden;
+}
+.box {
+  background-color: steelblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 33px;
+  /* move the content to the right  */
+  transform: translateX(200%);
+  /* 0.4s transition */
+  transition: transform 0.4s ease;
+}
+
+/* all the even box */
+.box:nth-of-type(even) {
+  /* move to the left -x */
+  transform: translateX(-200%);
+}
+h1 {
+  margin: 10px;
+}
+
+.box.active {
+  transform: translate(0);
+}
+
+.box h2 {
+  font-size: 40px;
+}

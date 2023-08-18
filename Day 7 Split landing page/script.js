@@ -1,0 +1,25 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const left = document.querySelector(".left");
+  const right = document.querySelector(".right");
+  const container = document.querySelector(".container");
+
+  // left side
+  left.addEventListener("mouseenter", () => {
+    container.classList.add("hover-left");
+    container.classList.remove("hover-right");
+  });
+
+  left.addEventListener("mouseleave", () => {
+    container.classList.remove("hover-left");
+  });
+
+  // right side
+  right.addEventListener("mouseenter", () => {
+    container.classList.add("hover-right");
+    container.classList.remove("hover-left");
+  });
+
+  right.addEventListener("mouseleave", () => {
+    container.classList.remove("hover-right");
+  });
+});
